@@ -46,14 +46,14 @@ Accedeix al directori del projecte:
 
    cd hackaton
 ```
-###Instal·lar les dependències
+### Instal·lar les dependències
 Executa la següent comanda per instal·lar totes les dependències necessàries per al projecte:
 ```bash
 
 npm install
 ```
 
-###Executar l'aplicació
+### Executar l'aplicació
 Després d'instal·lar les dependències, pots executar el projecte en mode de desenvolupament:
 ```bash
 
@@ -61,6 +61,8 @@ ng serve
 
 ```
 
-##Demo
+
+
+
 
 
