@@ -1,27 +1,66 @@
-# Hackaton
+# Hackathon It Academy Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.6.
+## Descripció
 
-## Development server
+Aquest projecte és una aplicació web desenvolupada durant l'Hackathon d'It Academy. L'aplicació permet als usuaris generar activitats aleatòries segons diverses categories, mostrant els resultats d'una manera interactiva i visual.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Pila Tecnològica Utilitzada
 
-## Code scaffolding
+- **Frontend**: 
+  - **Angular**: Utilitzat per a la creació de components interactius i el maneig de les funcionalitats de l'aplicació.
+  - **HTML5**: Utilitzat per estructurar el contingut de les pàgines.
+  - **CSS3**: Per estilitzar i dissenyar les interfícies visuals de l'aplicació, incloent la responsivitat per a diferents dispositius.
+  - **TypeScript**: El llenguatge utilitzat per al desenvolupament amb Angular, proporcionant tipatge estàtic i millores sobre JavaScript.
+  
+- **Backend / API**:
+  - **Bored API**: Una API externa utilitzada per generar activitats aleatòries en diverses categories.
+  
+- **Control de versions**:
+  - **Git**: Utilitzat per gestionar el codi font del projecte.
+  - **GitHub**: El repositori remot on es troba allotjat el codi.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Característiques del Projecte
 
-## Build
+- Generació d'activitats aleatòries a partir de categories definides.
+- Disseny adaptatiu que funciona bé en dispositius mòbils, tauletes i ordinadors.
+- Interfície d'usuari amb estils personalitzats, incloent animacions quan es mostra la informació.
+- Separació clara entre els components de l'aplicació: menú de selecció de categories, botó de generació d'activitats i àrea de resultats.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instruccions per posar en marxa el projecte
 
-## Running unit tests
+### Requisits previs
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- **Node.js**: Assegura't de tenir instal·lat Node.js a la teva màquina. Pots descarregar-lo [aquí](https://nodejs.org/).
+- **Angular CLI**: Instal·la l'eina de línia de comandes d'Angular:
+  ```bash
+  npm install -g @angular/cli
+### Clonar el repositori
 
-## Running end-to-end tests
+Clona aquest repositori al teu ordinador local:
+    ```bash
+    
+    git clone https://github.com/SilviaEzra/hackaton.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Accedeix al directori del projecte:
+  ```bash
 
-## Further help
+   cd hackaton
+```
+###Instal·lar les dependències
+Executa la següent comanda per instal·lar totes les dependències necessàries per al projecte:
+```bash
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+npm install
+```
+
+###Executar l'aplicació
+Després d'instal·lar les dependències, pots executar el projecte en mode de desenvolupament:
+```bash
+
+ng serve
+
+```
+
+##Demo
+
+
