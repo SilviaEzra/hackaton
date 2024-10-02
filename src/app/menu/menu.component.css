@@ -1,31 +1,98 @@
 .menu {
-    display: flex;
-    flex-direction: column; /* Para colocar los botones en una columna */
-    align-items: center; /* Alinear los botones hacia la izquierda */
-    height: 20vh; /* Ocupar toda la altura de la pantalla */
-    width: 50vw; /* Ocupar la mitad izquierda de la pantalla */
-    gap: 15px;
-    margin-top: 100px;
-   
-    
+  display: flex;
+  flex-direction: column; /* Para colocar los botones en una columna */
+  align-items: center; /* Alinear los botones hacia la izquierda */
+  height: 20vh; /* Ocupar toda la altura de la pantalla */
+  width: 50vw; /* Ocupar la mitad izquierda de la pantalla */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Estilo de los botones */
+button {
+  color: #ffffff;
+  padding: 0.5em 1.5em; /* Reducimos un poco el padding */
+  font-size: 16px; /* Disminuye ligeramente el tamaño de la fuente */
+  border-radius: 1em;
+  background: #cec9cf;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+  margin-left: 15px; /* Añadir margen a la izquierda */
+  margin-right: 15px; /* Añadir margen a la derecha */
+}
+
+/* Cambia el color del botón cuando pasas el ratón */
+button:hover {
+  color: #ffffff;
+  background: #6a0dad;
+}
+
+/* Estilo del botón cuando está activo (marcado después de hacer clic) */
+button.active {
+  background: #6a0dad;
+  color: #ffffff;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centra el menú tanto horizontal como verticalmente */
+  height: 35vh; /* Ocupa toda la altura de la pantalla */
+  width: 50vw; /* Ocupar la mitad izquierda de la pantalla */
+  gap: 15px; /* Espacio entre los botones */
+   /* Asegura que el menú esté centrado horizontalmente */
+}
+
+/* Estilo de los botones */
+button {
+  color: #ffffff;
+  padding: 0.5em 1.5em; /* Padding del botón */
+  font-size: 16px; /* Tamaño de la tipografía */
+  border-radius: 1em;
+  background: #cec9cf;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s;
+}
+
+/* Cambia el color del botón cuando pasas el ratón */
+button:hover {
+  color: #ffffff;
+  background: #6a0dad;
+}
+
+/* Estilo del botón cuando está activo (marcado después de hacer clic) */
+button.active {
+  background: #6a0dad;
+  color: #ffffff;
+}
+
+/* Responsividad para pantallas móviles */
+@media (max-width: 768px) {
+  .menu {
+    width: 90vw; /* Ajusta el ancho del menú en pantallas más pequeñas */
+    height: auto; /* Ajusta la altura del menú al contenido */
+    justify-content: center; /* Centra el menú verticalmente */
+    gap: 10px; /* Reduce el espacio entre botones */
   }
-  
-  /* Estilo de los botones */
+
   button {
-    color: #ffffff;
-    padding: 0.7em 1.7em;
-    font-size: 18px;
-    border-radius: 1em;
-    background: #cec9cf;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s;
-    margin-left: 15px; /* Añadir margen a la izquierda */
-    margin-right: 15px; /* Añadir margen a la derecha */
+    font-size: 14px; /* Reduce el tamaño de la tipografía en pantallas móviles */
+    padding: 0.4em 1.2em; /* Reduce ligeramente el padding para mantener proporción */
   }
-  
-  button:hover {
-    color: #ffffff;
-    background: #6a0dad;
+}
+
+@media (max-width: 480px) {
+  .menu {
+    width: 100vw; /* Ocupa todo el ancho en pantallas muy pequeñas */
+    height: auto; /* Ajusta la altura del menú al contenido */
+    gap: 10px; /* Ajusta el espacio entre botones */
   }
-  
+
+  button {
+    font-size: 12px; /* Reduce el tamaño de la tipografía en pantallas más pequeñas */
+    padding: 0.3em 1em; /* Ajuste adicional del padding */
+  }
+}

@@ -1,14 +1,35 @@
 <div class="menu">
-    <div class="menu-row">
-      <button class="btn" (click)="selectCategory('social')">Social</button>
-      <button class="btn" (click)="selectCategory('education')">Educació</button>
-      <button class="btn" (click)="selectCategory('charity')">Caritat</button>
-      <button class="btn" (click)="selectCategory('cooking')">Cuinar</button>
-    </div>
-  
-    <div class="menu-row second-row">
-      <button class="btn" (click)="selectCategory('relaxation')">Relaxació</button>
-      <button class="btn" (click)="selectCategory('busywork')">Treball intens</button>
-    </div>
+  <div class="menu-row">
+    <button 
+      class="btn" 
+      (click)="selectCategory('social')" 
+      [class.active]="selectedButton === 'social'">Social</button>
+    
+    <button 
+      class="btn" 
+      (click)="selectCategory('education')" 
+      [class.active]="selectedButton === 'education'">Educació</button>
+    
+    <button 
+      class="btn" 
+      (click)="selectCategory('charity')" 
+      [class.active]="selectedButton === 'charity'">Caritat</button>
+    
+    <button 
+      class="btn" 
+      (click)="selectCategory('cooking')" 
+      [class.active]="selectedButton === 'cooking'">Cuinar</button>
   </div>
-  
+
+  <div class="menu-row second-row">
+    <button 
+      class="btn" 
+      (click)="selectCategory('relaxation')" 
+      [class.active]="selectedButton === 'relaxation'">Relaxació</button>
+    
+    <button 
+      class="btn" 
+      (click)="selectCategory('busywork')" 
+      [class.active]="selectedButton === 'busywork'">Treball intens</button>
+  </div>
+</div>

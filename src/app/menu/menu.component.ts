@@ -8,9 +8,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class MenuComponent {
   @Output() categorySelected = new EventEmitter<string>();
+  selectedButton: string = ''; // Variable para almacenar el botón seleccionado
 
-  // Método para emitir la categoría seleccionada
+  // Método para emitir la categoría seleccionada y marcar el botón activo
   selectCategory(category: string) {
-    this.categorySelected.emit(category);
+    this.selectedButton = category; // Almacena la categoría seleccionada
+    this.categorySelected.emit(category); // Emite la categoría seleccionada
   }
 }
