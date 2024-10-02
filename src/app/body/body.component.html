@@ -1,0 +1,21 @@
+<div class="activity-container">
+  <div class="activity-card">
+    <!-- Imagen que sobresale por encima del trapecio -->
+    <img src="images/imagen.png" alt="Imagen Actividad" class="activity-image">
+    
+    <!-- Caja del trapecio -->
+    <div class="activity-box">
+      <h3>TROBA ALGUNA COSA A FER</h3>
+      <button (click)="generateActivity()" class="generate-btn">Generar</button> <!-- Botón dentro de la caja -->
+    </div>
+  </div>
+
+  <!-- Línea discontinua en el medio -->
+  <div class="divider"></div>
+
+  <!-- Resultado de la actividad generada en la parte derecha -->
+  <div *ngIf="selectedActivity" class="activity-result">
+    <h3>Activitat:</h3>
+    <p>{{ selectedActivity }}</p>
+  </div>
+</div>

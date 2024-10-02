@@ -1,0 +1,88 @@
+.activity-container {
+  display: flex;
+  justify-content: space-between; /* Divide en dos mitades: izquierda para actividad, derecha para resultado */
+  align-items: center;
+  height: 30vh; /* Toda la altura del contenedor */
+  width: 100vw; /* Ancho completo de la pantalla */
+  margin: 0;
+  padding: 0;
+}
+
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative; /* Permite que la imagen sobresalga */
+  width: 50vw; /* La mitad izquierda de la pantalla */
+}
+
+.activity-image {
+  width: 150px; /* Tamaño de la imagen */
+  height: auto;
+  position: relative;
+  top: 45px; /* Imagen sobresaliendo por encima del trapecio */
+  z-index: 1;
+}
+
+.activity-box {
+  background-image: url('/images/poligon.png'); /* Imagen de fondo */
+  background-size: contain; /* Asegura que la imagen se vea completa */
+  background-position: center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  padding: 20px;
+  width: 250px;
+  height: 150px;
+  border-radius: 15px; /* Bordes redondeados */
+  display: flex;
+  flex-direction: column; /* Coloca el texto y el botón en columna */
+  align-items: center;
+  justify-content: space-between; /* Espacio entre texto y botón */
+  text-align: center;
+  position: relative; /* Asegura que el z-index funcione */
+  z-index: 0;
+}
+
+.activity-box h3 {
+  font-family: Arial, sans-serif; /* Cambia la tipografía a Arial */
+  margin-top: 25px; /* Ajusta el margen superior */
+  font-size: 20px;
+  color: #000;
+  max-width: 200px; /* Limita el ancho para dividir en dos líneas */
+  word-wrap: break-word; /* Permite que las palabras se dividan */
+  line-height: 1.2; /* Ajusta el espaciado entre las líneas */
+}
+
+.generate-btn {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px; /* Añade un margen superior para separar del texto */
+}
+
+.generate-btn:hover {
+  background-color: #6a0dad; /* Cambia a morado al hacer hover */
+}
+
+.activity-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vw; /* Ocupa la mitad derecha de la pantalla */
+  text-align: center;
+}
+
+/* Estilo para la línea discontinua */
+.divider {
+  position: absolute;
+  left: 50%; /* Coloca la línea exactamente en el centro */
+  transform: translateX(-50%); /* Asegura que quede centrada */
+  border-right: 2px dashed #000; /* Línea discontinua vertical */
+  height: 80vh; /* Altura de la línea */
+}

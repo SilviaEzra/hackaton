@@ -1,0 +1,31 @@
+.menu {
+    display: flex;
+    flex-direction: column; /* Para colocar los botones en una columna */
+    align-items: center; /* Alinear los botones hacia la izquierda */
+    height: 20vh; /* Ocupar toda la altura de la pantalla */
+    width: 50vw; /* Ocupar la mitad izquierda de la pantalla */
+    gap: 15px;
+    margin-top: 100px;
+   
+    
+  }
+  
+  /* Estilo de los botones */
+  button {
+    color: #ffffff;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 1em;
+    background: #cec9cf;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+    margin-left: 15px; /* Añadir margen a la izquierda */
+    margin-right: 15px; /* Añadir margen a la derecha */
+  }
+  
+  button:hover {
+    color: #ffffff;
+    background: #6a0dad;
+  }
+  

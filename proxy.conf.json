@@ -1,0 +1,15 @@
+{
+    "/random": {
+      "target": "https://bored-api.appbrewery.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    },
+    "/filter": {
+      "target": "https://bored-api.appbrewery.com",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  
