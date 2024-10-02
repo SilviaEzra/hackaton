@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between; /* Divide en dos mitades: izquierda para actividad, derecha para resultado */
   align-items: center;
-  height: 30vh; /* Toda la altura del contenedor */
+  height: 30vh; /* Altura ajustada */
   width: 100vw; /* Ancho completo de la pantalla */
   margin-top: 0;
   padding: 0;
@@ -28,29 +28,29 @@
 .activity-box {
   background-image: url('/images/poligon.png'); /* Imagen de fondo */
   background-size: contain; /* Asegura que la imagen se vea completa */
-  background-position: center; /* Centra la imagen en el contenedor */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center;
+  background-repeat: no-repeat;
   padding: 20px;
   width: 250px;
   height: 150px;
-  border-radius: 15px; /* Bordes redondeados */
+  border-radius: 15px;
   display: flex;
-  flex-direction: column; /* Coloca el texto y el botón en columna */
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* Espacio entre texto y botón */
+  justify-content: space-between;
   text-align: center;
-  position: relative; /* Asegura que el z-index funcione */
+  position: relative;
   z-index: 0;
 }
 
 .activity-box h3 {
-  font-family: Arial, sans-serif; /* Cambia la tipografía a Arial */
-  margin-top: 25px; /* Ajusta el margen superior */
+  font-family: Arial, sans-serif;
+  margin-top: 25px;
   font-size: 20px;
   color: #252525;
-  max-width: 200px; /* Limita el ancho para dividir en dos líneas */
-  word-wrap: break-word; /* Permite que las palabras se dividan */
-  line-height: 1.2; /* Ajusta el espaciado entre las líneas */
+  max-width: 200px;
+  word-wrap: break-word;
+  line-height: 1.2;
 }
 
 .generate-btn {
@@ -62,11 +62,11 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-bottom: 10px; /* Añade un margen superior para separar del texto */
+  margin-bottom: 10px;
 }
 
 .generate-btn:hover {
-  background-color: #6a0dad; /* Cambia a morado al hacer hover */
+  background-color: #6a0dad;
 }
 
 .activity-result {
@@ -76,71 +76,124 @@
   align-items: center;
   width: 50vw; /* Ocupa la mitad derecha de la pantalla */
   text-align: center;
-  font-family: Arial, sans-serif; /* Tipografía Arial para el contenido del resultado */
+  font-family: Arial, sans-serif;
 }
 
 .activity-result h3 {
-  font-size: 25px; /* Tamaño del h3 un poco más grande */
-  font-weight: bold; /* Negrita */
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .activity-result p {
-  font-size: 20px; /* Tamaño del párrafo */
+  font-size: 20px;
   font-weight: bold;
-  max-width: 300px; /* Limita el ancho del párrafo para dividirlo en varias líneas */
-  text-align: center; /* Centra el texto */
-  word-wrap: break-word; /* Asegura que las palabras largas se dividan */
-  line-height: 1.5; /* Ajusta la altura de la línea */
+  max-width: 300px;
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 1.5;
   color: #6a0dad;
 }
 
 /* Estilo para la línea discontinua */
 .divider {
   position: absolute;
-  left: 50%; /* Coloca la línea exactamente en el centro */
-  transform: translateX(-50%); /* Asegura que quede centrada */
-  border-right: 2px dashed #252525; /* Línea discontinua vertical */
-  height: 75vh; /* Altura de la línea */
-  top: 20vh; /* Ajusta la posición para que quede más corta en la parte de abajo */
+  left: 50%;
+  transform: translateX(-50%);
+  border-right: 2px dashed #252525;
+  height: 75vh;
+  top: 20vh; /* Ajuste de la posición para evitar solapamientos */
+  z-index: -1; /* Asegura que no se superponga a otros elementos */
 }
 
-/* Responsividad para pantallas móviles */
-@media (max-width: 768px) {
+/* Responsividad para pantallas móviles e iPad vertical */
+@media (max-width: 820px) {
   .activity-container {
-    flex-direction: column; /* Cambia el layout a columnas en pantallas móviles */
-    justify-content: center; /* Asegura que todo esté centrado */
-    align-items: center; /* Asegura que los elementos estén centrados */
-    height: auto; /* Ajusta la altura al contenido */
-    gap: 20px; /* Espacio entre bloques */
-    margin-top: 30px;
-    width: 100vw; /* Ancho completo en móviles */
+    flex-direction: column; /* Cambia el layout a columnas */
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
   }
 
   .activity-card,
   .activity-result {
-    width: 90vw; /* Ambos elementos ocupan el 90% del ancho de la pantalla */
+    width: 90vw; /* El contenido ocupa el 90% del ancho de la pantalla */
+    margin-bottom: 20px;
   }
 
   .divider {
-    display: none; /* Oculta la línea discontinua en pantallas móviles */
+    display: none; /* Oculta la línea discontinua en pantallas móviles e iPad vertical */
   }
 }
 
-@media (max-width: 480px) {
+/* Responsividad para iPad horizontal */
+@media (min-width: 821px) and (max-width: 1180px) and (orientation: landscape) {
   .activity-container {
-    flex-direction: column; /* Asegura que el layout esté en columnas */
-    width: 100vw; /* El contenido ocupa todo el ancho */
-    gap: 15px;
-    margin-top: 30px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
   }
 
   .activity-card,
   .activity-result {
-    
-    width: 100vw; /* Los bloques ocupan todo el ancho de la pantalla */
+    width: 50vw; /* Mantén el diseño de dos columnas */
   }
 
   .divider {
-    display: none; /* Mantén la línea oculta en pantallas más pequeñas */
+    display: block; /* Mantiene la línea discontinua en iPad horizontal */
+  }
+}
+
+/* Responsividad para pantallas móviles en horizontal (932px) */
+@media (max-width: 932px) and (orientation: landscape) {
+  .activity-container {
+    display: flex;
+    flex-direction: row; /* Mantiene las dos columnas */
+    justify-content: space-between; /* Distribuye las columnas */
+    align-items: center;
+    width: 100vw; /* Ancho completo de la pantalla */
+    height: auto;
+    padding: 10px; /* Ajusta el padding para evitar solapamientos */
+  }
+
+  .activity-card {
+    width: 45vw; /* Ajusta el ancho de la columna izquierda */
+    margin-bottom: 20px; /* Elimina el margen inferior */
+  }
+
+  .activity-result {
+    width: 45vw; /* Ajusta el ancho de la columna derecha */
+  }
+
+  .activity-image {
+    width: 100px; /* Reduce el tamaño de la imagen */
+    height: auto;
+    top: 30px; /* Ajusta la posición de la imagen */
+  }
+
+  .activity-box {
+    width: 180px; /* Reduce el tamaño del recuadro */
+    height: 100px;
+  }
+
+  .generate-btn {
+    font-size: 14px; /* Reduce el tamaño del botón */
+    padding: 8px 16px; /* Ajusta el padding */
+  }
+
+  .activity-result p {
+    font-size: 18px; /* Reduce el tamaño del texto */
+    max-width: 250px; /* Limita el ancho del párrafo */
+  }
+
+  /* Línea discontinua para móviles en horizontal */
+  .divider {
+    position: absolute;
+    left: 50%; /* Centra la línea */
+    transform: translateX(-50%);
+    border-right: 2px dashed #252525; /* Línea discontinua vertical */
+    height: 45vh; /* Ajusta la altura de la línea */
+    top: 50vh; /* Ajusta la posición con respecto al menú */
+    z-index: 0; /* Asegura que la línea no se solape */
   }
 }

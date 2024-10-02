@@ -1,60 +1,26 @@
 .menu {
   display: flex;
   flex-direction: column; /* Para colocar los botones en una columna */
-  align-items: center; /* Alinear los botones hacia la izquierda */
-  height: 20vh; /* Ocupar toda la altura de la pantalla */
-  width: 50vw; /* Ocupar la mitad izquierda de la pantalla */
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* Estilo de los botones */
-button {
-  color: #ffffff;
-  padding: 0.5em 1.5em; /* Reducimos un poco el padding */
-  font-size: 16px; /* Disminuye ligeramente el tamaño de la fuente */
-  border-radius: 1em;
-  background: #cec9cf;
-  cursor: pointer;
-  border: none;
-  transition: all 0.3s;
-  margin-left: 15px; /* Añadir margen a la izquierda */
-  margin-right: 15px; /* Añadir margen a la derecha */
-}
-
-/* Cambia el color del botón cuando pasas el ratón */
-button:hover {
-  color: #ffffff;
-  background: #6a0dad;
-}
-
-/* Estilo del botón cuando está activo (marcado después de hacer clic) */
-button.active {
-  background: #6a0dad;
-  color: #ffffff;
-}
-
-.menu {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center; /* Centra el menú tanto horizontal como verticalmente */
-  height: 35vh; /* Ocupa toda la altura de la pantalla */
-  width: 50vw; /* Ocupar la mitad izquierda de la pantalla */
+  height: 35vh; /* Ajuste de la altura del menú */
+  width: 50vw; /* Ocupa la mitad izquierda de la pantalla */
   gap: 15px; /* Espacio entre los botones */
-   /* Asegura que el menú esté centrado horizontalmente */
+  margin-top: 0px;
 }
 
 /* Estilo de los botones */
 button {
   color: #ffffff;
-  padding: 0.5em 1.5em; /* Padding del botón */
+  padding: 0.5em 1.5em; /* Ajuste del padding */
   font-size: 16px; /* Tamaño de la tipografía */
   border-radius: 1em;
   background: #cec9cf;
   cursor: pointer;
   border: none;
   transition: all 0.3s;
+  margin-left: 15px; /* Espacio en el lado izquierdo */
+  margin-right: 15px; /* Espacio en el lado derecho */
 }
 
 /* Cambia el color del botón cuando pasas el ratón */
@@ -69,21 +35,41 @@ button.active {
   color: #ffffff;
 }
 
-/* Responsividad para pantallas móviles */
+/* Responsividad para pantallas tablets e iPads */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: column; /* Cambia el menú a columna en tablets verticales */
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 80vw; /* Ajusta el ancho del menú */
+    gap: 10px; /* Ajusta el espacio entre botones */
+    margin: 0 auto;
+  }
+
+  button {
+    font-size: 15px; /* Tamaño de la tipografía para tablets */
+    padding: 0.4em 1.3em; /* Padding ajustado para tablets */
+  }
+}
+
+/* Responsividad para pantallas móviles grandes */
 @media (max-width: 768px) {
   .menu {
     width: 90vw; /* Ajusta el ancho del menú en pantallas más pequeñas */
     height: auto; /* Ajusta la altura del menú al contenido */
     justify-content: center; /* Centra el menú verticalmente */
-    gap: 10px; /* Reduce el espacio entre botones */
+    gap: 10px; /* Ajusta el espacio entre botones */
   }
 
   button {
     font-size: 14px; /* Reduce el tamaño de la tipografía en pantallas móviles */
-    padding: 0.4em 1.2em; /* Reduce ligeramente el padding para mantener proporción */
+    padding: 0.4em 1.2em; /* Ajusta el padding para pantallas móviles */
   }
 }
 
+/* Responsividad para pantallas móviles pequeñas */
 @media (max-width: 480px) {
   .menu {
     width: 100vw; /* Ocupa todo el ancho en pantallas muy pequeñas */
@@ -92,7 +78,7 @@ button.active {
   }
 
   button {
-    font-size: 12px; /* Reduce el tamaño de la tipografía en pantallas más pequeñas */
+    font-size: 12px; /* Reduce el tamaño de la tipografía en pantallas muy pequeñas */
     padding: 0.3em 1em; /* Ajuste adicional del padding */
   }
 }
